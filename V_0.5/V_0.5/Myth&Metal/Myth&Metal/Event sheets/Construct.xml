@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Construct</name>
+    <events>
+        <event-block sid="9734871883561918">
+            <conditions>
+                <condition id="-10" name="Compare opacity" sid="5117909958401362" type="BlackFade">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Opacity">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8743788315152256" type="BlackFade">
+                    <param id="0" name="Instance variable">startFading</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="4359625883105621" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="3842970166052117" type="BlackFade">
+                    <param id="0" name="Opacity">BlackFade.Opacity - 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3833549715614663">
+            <conditions>
+                <condition id="-10" name="Compare opacity" sid="7276819701222394" type="BlackFade">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Opacity">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8054662692380201" type="BlackFade">
+                    <param id="0" name="Instance variable">startFading</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="2447847603646142" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="3730353158713911" type="BlackFade">
+                    <param id="0" name="Instance variable">startFading</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7198599395702021">
+            <conditions>
+                <condition id="-10" name="Compare opacity" sid="6036424285883763" type="BlackFade">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Opacity">100</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="4723954906316011" type="BlackFade">
+                    <param id="0" name="Instance variable">startFading</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="9624249755822358" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="2561841692061849" type="BlackFade">
+                    <param id="0" name="Opacity">BlackFade.Opacity + 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3564536610791149">
+            <conditions>
+                <condition id="-10" name="Compare opacity" sid="665482789007542" type="BlackFade">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Opacity">100</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="158073039859282" type="BlackFade">
+                    <param id="0" name="Instance variable">startFading</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5821068349977554" type="System">
+                    <param id="0" name="Layout">Intro</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
