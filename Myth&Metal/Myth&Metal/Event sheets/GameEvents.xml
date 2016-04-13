@@ -24,9 +24,38 @@
         <variable constant="0" name="RowCycle" sid="6104542655184761" static="0" type="number">1</variable>
         <variable constant="0" name="TargetDamage" sid="9402177092919918" static="0" type="number">0</variable>
         <comment>Selection is used to target the position of some card abilities.</comment>
+        <variable constant="0" name="PLAYERGODSIRE" sid="1226420060865758" static="0" type="text">Default</variable>
+        <variable constant="0" name="ENEMYGODSIRE" sid="4032251744219282" static="0" type="text">Default</variable>
         <variable constant="0" name="Selection" sid="1646674203998701" static="0" type="number">0</variable>
         <event-group description="Events triggering when the game layout is displayed." sid="8166404663568737" title="On Start of Layout">
             <sub-events>
+                <event-block sid="8986257673888391">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8543007350842024" type="System" />
+                        <condition id="-11" name="For Each" sid="8001615769242886" type="System">
+                            <param id="0" name="Object">GodsirePortrait</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6908545014245488" type="GodsirePortrait">
+                            <param id="0" name="Instance variable">Object</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="8427089339303959" type="GodsirePortrait">
+                            <param id="0" name="X">GodsireArchon.ImagePointX(GodsirePortrait.Object)</param>
+                            <param id="1" name="Y">GodsireArchon.ImagePointY(GodsirePortrait.Object)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="7825278243911331" type="GodsirePortrait">
+                            <param id="0" name="Pin to">GodsireArchon</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="7353413460584367" type="GodsirePortrait">
+                            <param id="0" name="Animation">GodsirePortrait.Name</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>Destroy unnecessary objects and rest all the game variables to the initial state.</comment>
                 <event-block sid="4805705260433793">
                     <conditions>
@@ -81,6 +110,30 @@
                         <action id="-9" name="Set value" sid="1225831994549669" type="System">
                             <param id="0" name="Variable">RowCycle</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9735802202919532">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="4412754177233505" type="Touch">
+                            <param id="0" name="Object">GodsirePortrait</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7173922510161694" type="GodsireArchon">
+                            <param id="0" name="Instance variable">Used</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3883782561972686" type="System">
+                            <param id="0" name="Variable">PLAYERGODSIRE</param>
+                            <param id="1" name="Value">GodsirePortrait.Name</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="818550745226223" type="GodsireArchon">
+                            <param id="0" name="Instance variable">Used</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="229058315659189" type="GodsireArchon">
+                            <param id="0" name="X">2000</param>
+                            <param id="1" name="Y">2000</param>
                         </action>
                     </actions>
                 </event-block>
@@ -196,7 +249,7 @@
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="1384055633005238" type="HintText">
-                                    <param id="0" name="Text">&quot;Deck Selection.&quot;</param>
+                                    <param id="0" name="Text">&quot;Godsire and Deck Selection.&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1094,6 +1147,36 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <event-block sid="4096278466019133">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5551800603081453" type="GodsirePortrait">
+                                            <param id="0" name="Instance variable">Object</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">-2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9708272623290273" type="GodsirePortrait">
+                                            <param id="0" name="Animation">ENEMYGODSIRE</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9253180773092113">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="875363108380442" type="GodsirePortrait">
+                                            <param id="0" name="Instance variable">Object</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="2987851217300865" type="GodsirePortrait">
+                                            <param id="0" name="Animation">PLAYERGODSIRE</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <comment>When both players have sent ready messages the game starts.</comment>
                                 <event-block sid="2999459714248144">
                                     <conditions>
@@ -5359,9 +5442,11 @@
                                     <actions />
                                     <sub-events>
                                         <comment>Targets only your mana object to be refreshed.</comment>
+                                        <comment>===============================================================</comment>
                                         <comment>Player Draws a card.</comment>
                                         <comment>Resets CardPositions to the ready value so that creatures can attack.</comment>
                                         <comment>Sets buttons to the ready state and also destroys and CardStatus objects (which removes the exhausted state from previously summoned creatures.</comment>
+                                        <comment>Resource Increamenting is done here.</comment>
                                         <event-block sid="5550102069669803">
                                             <conditions>
                                                 <condition id="-8" name="Is boolean instance variable set" sid="2018053071946558" type="ManaObject">
@@ -5376,6 +5461,10 @@
                                                 <action id="-13" name="Set boolean" sid="7815386431927025" type="CardPosition">
                                                     <param id="0" name="Instance variable">Ready</param>
                                                     <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="8814335668844433" type="ManaObject">
+                                                    <param id="0" name="Instance variable">ManaTotal</param>
+                                                    <param id="1" name="Value">ManaObject.ManaTotal+1</param>
                                                 </action>
                                                 <action id="-13" name="Set boolean" sid="5367321711545657" type="ManaObject">
                                                     <param id="0" name="Instance variable">ResourcePlayed</param>
