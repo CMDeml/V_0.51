@@ -8,9 +8,10 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>2x1vk7ivizw86</unique-id>
-    <saved-with-version>21202</saved-with-version>
+    <saved-with-version>22700</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -28,7 +29,7 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>1024</width>
+        <width>1362</width>
         <height>768</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
@@ -138,12 +139,22 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Menu" pingpong="0" repeatcount="1" repeatto="0" sid="9956056440059115" speed="0">
-                        <frame duration="1" hotspotX="0.49505" hotspotY="0.5" original-source="C:\Users\Worker\Desktop\1.png" />
+                        <frame duration="1" hotspotX="0.49505" hotspotY="0.5" original-source="C:\Users\Nathaniel\Desktop\V_0.51\Myth&amp;Metal\Myth&amp;Metal\Files\End Turn Button.png" />
                         <frame duration="1" hotspotX="0.49505" hotspotY="0.5" original-source="C:\Users\Worker\Desktop\1.png" />
                     </animation>
-                    <animation framecount="2" loop="0" name="EndTurn" pingpong="0" repeatcount="1" repeatto="0" sid="5500197181130883" speed="0">
-                        <frame duration="1" hotspotX="0.49505" hotspotY="0.5" original-source="C:\Users\Worker\Desktop\1.png" />
-                        <frame duration="1" hotspotX="0.49505" hotspotY="0.5" original-source="C:\Users\Worker\Desktop\1.png" />
+                    <animation framecount="1" loop="0" name="EndTurn" pingpong="0" repeatcount="1" repeatto="0" sid="5500197181130883" speed="0">
+                        <frame duration="1" hotspotX="0.494413" hotspotY="0.501618" original-source="C:\Users\Nathaniel\Desktop\V_0.51\Myth&amp;Metal\Myth&amp;Metal\Files\End Turn Button.png">
+                            <collision-poly>
+                                <point x="0.164804" y="0.190939" />
+                                <point x="0.5" y="0.0517799" />
+                                <point x="0.826816" y="0.200647" />
+                                <point x="0.946927" y="0.498382" />
+                                <point x="0.835196" y="0.809061" />
+                                <point x="0.5" y="0.944984" />
+                                <point x="0.170391" y="0.802589" />
+                                <point x="0.0586592" y="0.498382" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="4181589175521661" speed="0">
                         <frame duration="1" hotspotX="0.49505" hotspotY="0.5" original-source="C:\Users\Worker\Desktop\1.png" />
@@ -264,7 +275,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="GaulCastigator" pingpong="0" repeatcount="1" repeatto="0" sid="3659253433142326" speed="5">
-                        <frame duration="1" hotspotX="1.31313" hotspotY="0.389952" original-source="\\psbdfilesrvr.psu-erie.bd.psu.edu\student\ntd5034\private\desktop\MythCards\Cyborg\Gaul Castigator.png">
+                        <frame duration="1" hotspotX="0.501683" hotspotY="0.5" original-source="\\psbdfilesrvr.psu-erie.bd.psu.edu\student\ntd5034\private\desktop\MythCards\Cyborg\Gaul Castigator.png">
                             <collision-poly>
                                 <point x="0" y="0" />
                                 <point x="0.998545" y="0" />
@@ -1416,7 +1427,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2633771424998182" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501027" original-source="\\psbdfilesrvr.psu-erie.bd.psu.edu\student\ntd5034\private\desktop\Construct 2\Projects\SP\Files\MythBG.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\psbdfilesrvr.psu-erie.bd.psu.edu\student\ntd5034\private\desktop\Construct 2\Projects\SP\Files\MythBG.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1471,6 +1482,70 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Browser" sid="6076841844545087">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Sprite5" sid="8949335927927782">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7045984458485555" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="5606597953970731">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Nathaniel\Desktop\V_0.51\Myth&amp;Metal\Myth&amp;Metal\Files\Myth Final Board.png" />
+        </object-type>
+        <object-type name="GodsirePortrait" sid="3728203126730317">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Object" sid="3479423367246391" type="number" />
+                <instance-variable name="Name" sid="9320839350920313" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="7608488870663865">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9761046625359588" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500246" original-source="C:\Users\Nathaniel\Desktop\V_0.51\Myth&amp;Metal\Myth&amp;Metal\Files\Sire Select Screen Amun.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Odin" pingpong="0" repeatcount="1" repeatto="0" sid="4873687000258682" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500246" original-source="C:\Users\Nathaniel\Desktop\V_0.51\Myth&amp;Metal\Myth&amp;Metal\Files\Sire Select Screen Odin.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Zeus" pingpong="0" repeatcount="1" repeatto="0" sid="57122668748757" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500246" original-source="C:\Users\Nathaniel\Desktop\V_0.51\Myth&amp;Metal\Myth&amp;Metal\Files\Sire Select Screen Zeus.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Chronos" pingpong="0" repeatcount="1" repeatto="0" sid="594984871772597" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500246" original-source="C:\Users\Nathaniel\Desktop\V_0.51\Myth&amp;Metal\Myth&amp;Metal\Files\Sire Select Screen Chronos.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Amun" pingpong="0" repeatcount="1" repeatto="0" sid="3943681991353303" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500246" original-source="C:\Users\Nathaniel\Desktop\V_0.51\Myth&amp;Metal\Myth&amp;Metal\Files\Sire Select Screen Amun.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Shiva" pingpong="0" repeatcount="1" repeatto="0" sid="6501931993948244" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500246" original-source="C:\Users\Nathaniel\Desktop\V_0.51\Myth&amp;Metal\Myth&amp;Metal\Files\Sire Select Screen Shiva.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GodsireArchon" sid="2011677400382258">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Used" sid="2572638479460612" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9930443029287974" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.125833" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.291667" y="0.5" />
+                        <image-point name="Imagepoint 3" x="0.458333" y="0.502" />
+                        <image-point name="Imagepoint 4" x="0.625" y="0.502" />
+                        <image-point name="Imagepoint 5" x="0.791667" y="0.502" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1502,6 +1577,7 @@
             </properties>
         </global-instance>
         <global-instance type="WebStorage" uid="90" />
+        <global-instance type="Browser" uid="150" />
     </global-instances>
     <sounds-folder />
     <music-folder />
