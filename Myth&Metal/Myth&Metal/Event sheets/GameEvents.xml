@@ -5305,6 +5305,19 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="9329837989935455">
+                            <conditions>
+                                <condition id="16" name="On hold over object" sid="6319776454404135" type="Touch">
+                                    <param id="0" name="Object">CardPosition</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2764303345519924" type="CardPosition">
+                                    <param id="0" name="Instance variable">Number</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="477301791940276" title="Ending the Turn">
