@@ -1101,6 +1101,12 @@
                                                     <param id="2" name="Message">&quot;&quot;</param>
                                                     <param id="3" name="Mode">0</param>
                                                 </action>
+                                                <action id="8" name="Send message" sid="2691294353020955" type="Multiplayer">
+                                                    <param id="0" name="Peer ID">&quot;&quot;</param>
+                                                    <param id="1" name="Tag">&quot;Godsire&quot;</param>
+                                                    <param id="2" name="Message">PLAYERGODSIRE</param>
+                                                    <param id="3" name="Mode">0</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <comment>Whereas the Peers messages are sent without an ID so it goes back to the host,</comment>
@@ -1117,6 +1123,12 @@
                                                     <param id="0" name="Peer ID">&quot;&quot;</param>
                                                     <param id="1" name="Tag">&quot;Ready&quot;</param>
                                                     <param id="2" name="Message">&quot;&quot;</param>
+                                                    <param id="3" name="Mode">0</param>
+                                                </action>
+                                                <action id="8" name="Send message" sid="8422900710078281" type="Multiplayer">
+                                                    <param id="0" name="Peer ID">&quot;&quot;</param>
+                                                    <param id="1" name="Tag">&quot;Godsire&quot;</param>
+                                                    <param id="2" name="Message">PLAYERGODSIRE</param>
                                                     <param id="3" name="Mode">0</param>
                                                 </action>
                                             </actions>
@@ -1147,7 +1159,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="4096278466019133">
+                                <event-block bookmark="1" sid="4096278466019133">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="5551800603081453" type="GodsirePortrait">
                                             <param id="0" name="Instance variable">Object</param>
@@ -1159,6 +1171,12 @@
                                         <action id="4" name="Set animation" sid="9708272623290273" type="GodsirePortrait">
                                             <param id="0" name="Animation">ENEMYGODSIRE</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="8" name="Send message" sid="9516533276611662" type="Multiplayer">
+                                            <param id="0" name="Peer ID">&quot;&quot;</param>
+                                            <param id="1" name="Tag">&quot;Godsire&quot;</param>
+                                            <param id="2" name="Message">PLAYERGODSIRE</param>
+                                            <param id="3" name="Mode">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1200,6 +1218,12 @@
                                         <action id="-9" name="Set value" sid="1500183484029347" type="System">
                                             <param id="0" name="Variable">PlayerTurn</param>
                                             <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="8" name="Send message" sid="1009426604738226" type="Multiplayer">
+                                            <param id="0" name="Peer ID">&quot;&quot;</param>
+                                            <param id="1" name="Tag">&quot;Godsire&quot;</param>
+                                            <param id="2" name="Message">PLAYERGODSIRE</param>
+                                            <param id="3" name="Mode">0</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -7096,6 +7120,12 @@
                                             <param id="0" name="Name">&quot;GameStart&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
+                                        <action id="8" name="Send message" sid="1040846307958565" type="Multiplayer">
+                                            <param id="0" name="Peer ID">&quot;&quot;</param>
+                                            <param id="1" name="Tag">&quot;Godsire&quot;</param>
+                                            <param id="2" name="Message">PLAYERGODSIRE</param>
+                                            <param id="3" name="Mode">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="8964568801744677">
@@ -7110,6 +7140,12 @@
                                         <action id="0" name="Call function" sid="8246731594932465" type="Function">
                                             <param id="0" name="Name">&quot;GameStart&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="8" name="Send message" sid="6225012274033324" type="Multiplayer">
+                                            <param id="0" name="Peer ID">&quot;&quot;</param>
+                                            <param id="1" name="Tag">&quot;Godsire&quot;</param>
+                                            <param id="2" name="Message">PLAYERGODSIRE</param>
+                                            <param id="3" name="Mode">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -7130,6 +7166,33 @@
                                 <action id="0" name="Call function" sid="4300199223829932" type="Function">
                                     <param id="0" name="Name">&quot;EnemyGainCard&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="9740710307120799" title="Multiplayer Enemy Godsire">
+                    <sub-events>
+                        <comment>Calls the enemy gain card function to add another enemy card.</comment>
+                        <event-block bookmark="1" sid="5257971370159215">
+                            <conditions>
+                                <condition id="15" name="On peer message" sid="6006360056167301" type="Multiplayer">
+                                    <param id="0" name="Tag">&quot;Godsire&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="9649930923755496" type="GodsirePortrait">
+                                    <param id="0" name="Instance variable">Object</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="9427906243471227" type="System">
+                                    <param id="0" name="Variable">ENEMYGODSIRE</param>
+                                    <param id="1" name="Value">Multiplayer.Message</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2947820918233996" type="GodsirePortrait">
+                                    <param id="0" name="Animation">ENEMYGODSIRE</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
