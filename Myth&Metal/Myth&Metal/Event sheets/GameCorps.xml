@@ -77,5 +77,18 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="6654729002071767">
+            <conditions>
+                <condition id="-4" name="Trigger once while true" sid="6996803963966093" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="3308940366605683" type="Audio">
+                    <param id="0" name="Audio file">menuMusic</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;menu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

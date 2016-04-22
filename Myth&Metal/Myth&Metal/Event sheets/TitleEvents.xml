@@ -243,5 +243,21 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="7462764242473506">
+            <conditions>
+                <condition id="-4" name="Trigger once while true" sid="5705724780993746" type="System" />
+                <condition id="5" inverted="1" name="Is tag playing" sid="8148277502586604" type="Audio">
+                    <param id="0" name="Tag">&quot;menu&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="9113903105682542" type="Audio">
+                    <param id="0" name="Audio file">menuMusic</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;menu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
